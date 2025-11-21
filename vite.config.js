@@ -7,11 +7,11 @@ export default defineConfig({
 
   server: {
     port: 3000,
-    proxy: {
-      "/api": {
-        target: "https://tm-server-0feo.onrender.com",
-        changeOrigin: true,
-      },
-    },
+    // proxy: {
+    //   "/api": {
+    //     target: "https://tm-server-0feo.onrender.com",
+    //     changeOrigin: true,
+    //   },
+    // },
   },
 });
