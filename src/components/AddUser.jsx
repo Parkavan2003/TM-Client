@@ -44,6 +44,7 @@ useEffect(() => {
       if (userData) {
         const res = await updateUser(data).unwrap();
         toast.success(res?.message);
+
         if (userData?._id === user?._id) {
           dispatch(setCredentials({ ...res?.user }));
         }
@@ -53,6 +54,7 @@ useEffect(() => {
           password: data?.email,
         }).unwrap();
         toast.success("New User added successfully");
+         dispatch(setCredentials(res?.user));
       }
 
       setTimeout(() => {
