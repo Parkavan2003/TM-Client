@@ -32,6 +32,7 @@ const Register = () => {
 
       const res = await registerUser(finalData).unwrap();
       dispatch(setCredentials(res));
+      toast.success("Registered successfully!");
       navigate("/dashboard");
     } catch (err) {
       toast.error(err?.data?.message || err.error);
